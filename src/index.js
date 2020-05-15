@@ -10,6 +10,8 @@ import Youtube from './icons/Youtube'
 import Instagram from './icons/Instagram'
 import Tumblr from './icons/Tumblr'
 import Github from './icons/Github'
+import Pinterest from './icons/Pinterest'
+
 
 
 const getIcon = domain => {
@@ -26,6 +28,8 @@ const getIcon = domain => {
       return Tumblr;
     case 'github.com':
       return Github;
+    case 'pinterest.com':
+      return Pinterest;
     default:
       return;
   }
@@ -69,6 +73,10 @@ const styles = ({ color, hoverColor, hoverMove, spacing }) => ({
   'github.com': css`
     color: ${color || 'black'};
   `,
+  
+  'pinterest.com': css`
+    color: ${color || 'black'};
+  `,
 
 });
 
@@ -83,6 +91,7 @@ const FollowAt = props => {
           <a
             key={socialMedia}
             href={link}
+            target="_blank"
             className={`${computedStyles.social} ${
               computedStyles[socialMedia]
             }`}
