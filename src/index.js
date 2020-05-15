@@ -73,14 +73,14 @@ const styles = ({ color, hoverColor, hoverMove, spacing }) => ({
   'github.com': css`
     color: ${color || 'black'};
   `,
-  
+
   'pinterest.com': css`
     color: ${color || 'black'};
   `,
 
 });
 
-const FollowAt = props => {
+const SocialFollow = props => {
   const { computedStyles, links, iconSize } = props;
   return (
     <div className={computedStyles.socialContainer}>
@@ -118,4 +118,4 @@ FollowAt.defaultProps = {
   hoverMove: true,
 };
 
-export default withStyles(styles)(FollowAt);
+export default withStyles(styles)(SocialFollow);
